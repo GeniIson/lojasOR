@@ -94,8 +94,19 @@
     
     <!-- Custom styles for this template -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+
+
+
+    <!-- este aqui mostra todo o estilo da pagina genilson   -->
+    <link href="../assets/dist/css/dashboard.css" rel="stylesheet">
+
+
+
+
+
+
+
+
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -427,5 +438,25 @@
 </div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js" integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js" integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG" crossorigin="anonymous"></script>
+    
+    
+    
+    <?php
+$variavel = "4500";
+?>
+
+
+<script>
+  var test = "<?php echo $variavel; ?>";
+</script>
+
+    <script src="dashboard.js"></script></body>
+
+
+
+
+
+
+
 </html>
