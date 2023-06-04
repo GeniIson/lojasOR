@@ -7,6 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.112.5">
+
+    <link rel="icon" href="../imagens/logo.jpeg">
+    
     <title>Dashboard LojasOR· Bootstrap v5.3</title>
 
    
@@ -99,6 +102,10 @@
 
     <!-- este aqui mostra todo o estilo da pagina genilson   -->
     <link href="../assets/dist/css/dashboard.css" rel="stylesheet">
+
+
+    <link href="imagelogostylo.css" rel="stylesheet">
+
 
 
 
@@ -200,6 +207,8 @@
 </svg>
 
 <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+
+
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Lojas OR</a>
 
   <ul class="navbar-nav flex-row d-md-none">
@@ -222,7 +231,9 @@
 
 <div class="container-fluid">
   <div class="row">
+
     <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+    <img src="../imagens/logo.jpeg" alt="" id="logo">
       <div class="offcanvas-lg offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="sidebarMenuLabel">Company name</h5>
@@ -344,7 +355,7 @@
 
 
       <h2>Patrimonio</h2>
-      <p>Dinheiro:0,00R$ --- Aparelho:0,00R$ --- Material:0,00R$ --- Total:0,00R$</p>
+      <p>Capital:0,00R$ --- Aparelho:0,00R$ --- Material:0,00R$ --- Total:0,00R$</p>
       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
 

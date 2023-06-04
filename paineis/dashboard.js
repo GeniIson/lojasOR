@@ -19,16 +19,17 @@
         'Sexta',
         'Sabado',
         'Domingo'
+        
       ],
       datasets: [{
         data: [
           test,
-          8030,
+          5030,
+          8000,
           10000,
-          2000,
-          2340,
-          2400,
-          1200
+          15340,
+          24000,
+          52000
         ],
         lineTension: 0,
         backgroundColor: 'transparent',
