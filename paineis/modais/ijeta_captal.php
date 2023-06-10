@@ -21,7 +21,7 @@
     <label for='data_pagamento' class='form-label'>Data do Recebimento</label>
         
           
-    <input type='date' class='form-check-label' id='data_pagamento'name='data_recebimento' value='$data_hoje'>
+    <input type='date' class='form-check-label' id='data_pagamento'name='data_recebimento' value='<?=$data_i?>'>
       </span>
      <br>
 
