@@ -358,14 +358,29 @@ data-bs-toggle='modal'
           <ul class="nav flex-column mb-auto">
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#"
-                    
-data-bs-toggle='modal' 
-       data-bs-target='#cadastra_empresa'
-       
+ 
        >
                 <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
-                Configurações <br>(cadastra empresa)
+                Configurações 
               </a>
+              <a class="nav-link d-flex align-items-center gap-2" href="#"
+                    
+                    data-bs-toggle='modal' 
+                           data-bs-target='#cadastra_empresa'
+                           
+                           >
+                                    
+                                    (cadastra empresa)
+                                  </a>
+                                  <a class="nav-link d-flex align-items-center gap-2" href="#"
+                    
+                    data-bs-toggle='modal' 
+                           data-bs-target='#cadastra_usuario'
+                           
+                           >
+                                  
+                                    (cadastra usuario)
+                                  </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
