@@ -1,14 +1,20 @@
-<div class='modal fade' id='inseri_captal' tabindex='-1' aria-labelledby='inseri_captal' aria-hidden='true'>
+
+
+
+
+
+
+<div class='modal fade' id='comprar_aparelho' tabindex='-1' aria-labelledby='comprar_aparelho' aria-hidden='true'>
 <div class='modal-dialog'>
   <div class='modal-content'>
     <div class='modal-header'>
-      <h5 class='modal-title' id='exampleModalLabel'>Injetar capital</h5>
+      <h5 class='modal-title' id='exampleModalLabel'>Inserir uma compra de um aparelho</h5>
     
    
       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
     </div>
-    <p>Nesta aba voce pode lançar emprestimos e capital injetado na empresa de bancos, Investidores e donos.</p>
-    <form id="meu-formulario" action='?valores=$id_os#lacar_valor' method='POST'>
+  
+    <form id="meu-formulario2" action='?valores=$id_os#lacar_valor' method='POST'>
 
     
 
@@ -25,10 +31,10 @@
       </span>
      <br>
 
-    <label for='Descri' class='form-check-label'>Descrição</label>
+    <label for='Descri2' class='form-check-label'>Descrição</label>
     
     
-    <input type='text' id="Descri" class='form-control' step='0.05'  min='0' name='valor' placeholder='Ex:Emprestimo para pagar em 10 meses'>
+    <input type='text' id="Descri2" class='form-control' step='0.05'  min='0' name='valor' placeholder='Ex:Emprestimo para pagar em 10 meses'>
     <br>
    
   
@@ -39,15 +45,15 @@
          
           
     
-         <label for='valor' class='form-check-label'>Valor</label>
+         <label for='valor2' class='form-check-label'>Valor</label>
     
     
-         <input type='number'  class='form-control' step='0.05'  min='0' id="valor" name='valor' placeholder='0,00'>
+         <input type='number'  class='form-control' step='0.05'  min='0' id="valor2" name='valor2' placeholder='0,00'>
         
         
            
          </div>
-          <button type='submit'class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ok' id="bt_ok" value='1'>Salvar (injetar)</button>
+          <button type='submit'class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ok_compra' id="bt_ok_compra" value='1'>Salvar compra</button>
          
           <p></p>
 
@@ -73,20 +79,20 @@
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
 <script>//formulario de validação
-    document.getElementById('bt_ok').addEventListener('click', function(event) {
+    document.getElementById('bt_ok_compra').addEventListener('click', function(event) {
       // impede o envio do formulário
       event.preventDefault();
 
       // verifica se os campos estão vazios
-      var formulario = document.getElementById('meu-formulario');//este pega o formulario que quero usa
+      var formulario = document.getElementById('meu-formulario2');//este pega o formulario que quero usa
       var inputs = formulario.getElementsByTagName('input');//este pega o tipo de input etc
       
-        if (inputs['valor'].value.trim() == '') {
+        if (inputs['valor2'].value.trim() == '') {
           alert('Por favor, digite o valor');
           return;
         }
         var msg = formulario.getElementsByTagName('input');
-        if (msg['Descri'].value.trim() == '') {
+        if (msg['Descri2'].value.trim() == '') {
           alert('Mensagem vazia! digite a descrição');
           return;
         }
