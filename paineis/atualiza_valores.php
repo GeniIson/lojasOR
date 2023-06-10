@@ -19,7 +19,7 @@
  $url="http://$ip/lojasor/paineis/";
 
   $_SESSION['DNS'] = $url;
-
+  $_SESSION['aparelho_compra_valor_total']=1;
  $_SESSION['captal']=1;
 $_SESSION['id_usuario']=1;
 $_SESSION['ID_emprersa']=1;

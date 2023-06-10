@@ -14,7 +14,7 @@
       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
     </div>
   
-    <form id="meu-formulario2" action='?valores=$id_os#lacar_valor' method='POST'>
+    <form id="meu-formulario2" action='gravar_no_bd/compra_aparelho_bd.php' method='POST'>
 
     
 
@@ -81,7 +81,8 @@
           <p></p>
 
          
-        
+          <input type='hidden' id='bt_coprar' name='bt_coprar' value='' />
+          <input type='hidden' id='id_impresa' name='id_impresa' value='<?= $idimpresa ?>' />
 
        </form>
        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Voltar</button>
