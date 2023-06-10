@@ -8,7 +8,10 @@
       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
     </div>
     <p>Nesta aba voce pode lançar emprestimos e capital injetado na empresa de bancos, Investidores e donos.</p>
-    <form id="meu-formulario" action='?valores=$id_os#lacar_valor' method='POST'>
+
+
+
+    <form id="meu-formulario" action='gravar_no_bd/ijetar_captal_bd.php' method='POST'>
 
     
 
@@ -28,7 +31,7 @@
     <label for='Descri' class='form-check-label'>Descrição</label>
     
     
-    <input type='text' id="Descri" class='form-control' step='0.05'  min='0' name='valor' placeholder='Ex:Emprestimo para pagar em 10 meses'>
+    <input type='text' id="Descri" class='form-control' name='Descri' placeholder='Ex:Emprestimo para pagar em 10 meses'>
     <br>
    
   
@@ -51,7 +54,8 @@
          
           <p></p>
 
-         
+          <input type='hidden' id='bt_injetar' name='bt_injetar' value='' />
+          <input type='hidden' id='id_impresa' name='id_impresa' value='<?= $idimpresa ?>' />
         
 
        </form>

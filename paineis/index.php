@@ -1,9 +1,9 @@
 <?php
- session_start(); 
+   session_start();   
 
 
  //esta parte para inia e indentificar
- $_SESSION['ID_emprersa'] = 1;
+ $_SESSION['ID_emprersa'] = '1';
 
 //conctar ao banco de dados
 include "../conf_bd/conexao.php";

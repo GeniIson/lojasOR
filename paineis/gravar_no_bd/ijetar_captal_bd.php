@@ -4,53 +4,49 @@
     //session_start();
   //  require_once 'verifica-logado.php';
     // chamar nossa conexao
-    require "../conf_bd/conexao.php";
-   
+    require "../../conf_bd/conexao.php";
+    session_start(); 
    
   
-    if(isset($_POST['bt_s'])) {
-        $idOs   =mysqli_real_escape_string($con, $_POST['idOs']);
-
-        if(  $_POST['sintoma']!=''&&  $_POST['causa']!=''  && $_POST['solucao']!=""){ 
-  
-       
-        $sintoma  =mysqli_real_escape_string($con, $_POST['sintoma']);
-        $causa  =mysqli_real_escape_string($con, $_POST['causa']);
-        $modelo  =mysqli_real_escape_string($con, $_POST['Modelo']);
-        $marca  ='';//mysqli_real_escape_string($con, $_POST['marca']);
+    if(isset($_POST['bt_injetar'])) {
         
-        $solucao  =mysqli_real_escape_string($con, $_POST['solucao']);
+        $ipresa_verificador =mysqli_real_escape_string($con, $_POST['id_impresa']);
 
-        $link_ =mysqli_real_escape_string($con, $_POST['link_']);
+          
+
+        if( $_SESSION['ID_emprersa'] ==$ipresa_verificador  ){ 
+  
+            $captal= $_SESSION['captal'];
+            $id_usuario   =$_SESSION['id_usuario'];
 
 
-        $data_inserir  =mysqli_real_escape_string($con, $_POST['data']);
-       
-        $id_logado =mysqli_real_escape_string($con, $_POST['id_logado']);
-        $criador =mysqli_real_escape_string($con, $_POST['criador']);
-       
-        $_SESSION["id_os"]=$idOs ;
-      
-       
-        $nivel=0;
+            $empresa_id   =mysqli_real_escape_string($con, $_POST['id_impresa']);
+            $descricao  =mysqli_real_escape_string($con, $_POST['Descri']);
+            
 
-$sql = "INSERT INTO dicas (marca,data,sintoma,causa,modelo,tipo,nivel,id_criador,criador,solucao,link_)
+            $capital_add=mysqli_real_escape_string($con, $_POST['valor']);
+            $data  =mysqli_real_escape_string($con, $_POST['data_recebimento']);
 
-VALUES ('$marca','$data_inserir','$sintoma','$causa','$modelo','$tipo','$nivel','$id_logado','$criador','$solucao','$link_')";
+
+            $capital_valor= $captal+ $capital_add;
+
+$sql = "INSERT INTO movimentacao_financeir (empresa_id,descricao,id_usuario,capital_valor,data)
+
+VALUES ('$empresa_id','$descricao','$id_usuario','$capital_valor','$data')";
 
        
         // EXECUTAR INSTRUCAO SQL E VERIFICAR SUCESSO
         if(mysqli_query($con, $sql)) {
-            $_SESSION['mensagem'] = "Dica inserida com sucesso!";
+            $_SESSION['mensagem'] = "Valor inserida com sucesso!";
             $_SESSION['status']   = "success";
 
-           header("Location: ../?iniciar_Os=$idOs&_BD_sucesso");
+           header("Location: ../");
         } 
     }
         else {
             $_SESSION['mensagem'] = "Não foi possível inserir informações";
             $_SESSION['status']   = "danger";
-            header("Location: ../?iniciar_Os=$idOs");
+            header("Location: ../");
         }
 
 

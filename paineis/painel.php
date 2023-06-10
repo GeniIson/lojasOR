@@ -1,3 +1,8 @@
+<?php
+ $idimpresa=$_SESSION['ID_emprersa'];
+?>
+
+
 <!doctype html>
 <html lang="pt-br" data-bs-theme="auto">
   <head><script src="../assets/js/color-modes.js"></script>
@@ -509,16 +514,20 @@ data-bs-toggle='modal'
     
     
     
-    <?php
-$variavel = "4500";
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js" integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG" crossorigin="anonymous"></script>
+<?php
+//chamar arquivo gerandor do grafico
+
+include 'grafico/movimeta_grafico_em_js.php';
 ?>
-
-
-<script>
-  var test = "<?php echo $variavel; ?>";
-</script>
-
-    <script src="dashboard.js"></script></body>
+  
+  
+  
+  
+  </body>
 
 
 

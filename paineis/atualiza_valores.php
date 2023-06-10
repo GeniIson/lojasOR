@@ -16,6 +16,10 @@
 
  //pegar ip do servidor e transmformar em dominio DNS
  $ip = gethostbyname(gethostname());
- $url="http://<?= $ip; ?>/lojasor/paineis/";
+ $url="http://$ip/lojasor/paineis/";
 
   $_SESSION['DNS'] = $url;
+
+ $_SESSION['captal']=1;
+$_SESSION['id_usuario']=1;
+$_SESSION['ID_emprersa']=1;
