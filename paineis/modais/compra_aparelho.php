@@ -24,17 +24,40 @@
  
     <span style=' float:right;'>
    
-    <label for='data_pagamento' class='form-label'>Data do Recebimento</label>
+    <label for='data_pagamento' class='form-label'>Data da compra</label>
         
           
-    <input type='date' class='form-check-label' id='data_pagamento'name='data_recebimento' value='$data_hoje'>
+    <input type='date' class='form-check-label' id='data_pagamento'name='data_recebimento' value='<?=$data_i?>'>
       </span>
      <br>
+     <label for='tipo' class='form-check-label'>Tipo</label>
+      
+      <select class='form-select' id='tipo' name='tipo' required>
+        <optgroup label='Escolha um tipo e motivo deste lançamento'>
+        <option value='0'></option>
+        <option value='TV'>TV</option>
+        <option value='outros'>Outro</option>
+       <?php
+        //include 'pull/consultar-tecnico_caxabox.php';
+       ?>    
+        </optgroup>
+      </select>
+      <br>
 
-    <label for='Descri2' class='form-check-label'>Descrição</label>
+    <label for='Marca' class='form-check-label'>Marca</label>
     
     
-    <input type='text' id="Descri2" class='form-control' step='0.05'  min='0' name='valor' placeholder='Ex:Emprestimo para pagar em 10 meses'>
+    <input type='text' id="Marca" class='form-control'  name='Marcar' placeholder='Ex: LG'>
+    <br>
+    <label for='Modelo' class='form-check-label'>Modelo</label>
+    
+    
+    <input type='text' id="Modelo" class='form-control'  name='Modelo' placeholder='Ex:Pt32ls2050'>
+    <br>
+    <label for='Descri' class='form-check-label'>Descrição</label>
+    
+    
+    <input type='text' id="Descri" class='form-control'  name='Descri' placeholder='Ex:Tv lg de 32 polegadas comprada a João'>
     <br>
    
   
@@ -45,7 +68,7 @@
          
           
     
-         <label for='valor2' class='form-check-label'>Valor</label>
+         <label for='valor2' class='form-check-label'>Valor da compra</label>
     
     
          <input type='number'  class='form-control' step='0.05'  min='0' id="valor2" name='valor2' placeholder='0,00'>
@@ -91,8 +114,13 @@
           alert('Por favor, digite o valor');
           return;
         }
+        var select=formulario.getElementsByTagName('select');
+        if (select['tipo'].value.trim() == 0) {
+          alert('Por favor, escolha o tipo');
+          return;
+        }
         var msg = formulario.getElementsByTagName('input');
-        if (msg['Descri2'].value.trim() == '') {
+        if (msg['Descri'].value.trim() == '') {
           alert('Mensagem vazia! digite a descrição');
           return;
         }
