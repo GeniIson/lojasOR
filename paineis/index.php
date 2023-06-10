@@ -1,4 +1,5 @@
 <?php
 
 
-include_once "painel.php";
+include "painel.php";
+include "modais/ijeta_captal.php";
