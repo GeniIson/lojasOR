@@ -20,7 +20,7 @@
             $id_usuario   =$_SESSION['id_usuario'];
             
 
-
+            $tipo   =mysqli_real_escape_string($con, $_POST['tipo']);
             $empresa_id   =mysqli_real_escape_string($con, $_POST['id_impresa']);
             $descricao  =mysqli_real_escape_string($con, $_POST['Descri']);
             
@@ -29,9 +29,9 @@
             $data  =mysqli_real_escape_string($con, $_POST['data_recebimento']);
 
 
-$sql = "INSERT INTO aparelhos (id_empresa,descricao,valor_compra,data_compra)
+$sql = "INSERT INTO aparelhos (tipo,id_empresa,descricao,valor_compra,data_compra,status)
 
-VALUES ('$empresa_id','$descricao','$valor_compra_add','$data')";
+VALUES ('$tipo','$empresa_id','$descricao','$valor_compra_add','$data','Comprado')";
 
 if(mysqli_query($con, $sql)) {
 
