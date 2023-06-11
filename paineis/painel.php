@@ -419,11 +419,16 @@ data-bs-toggle='modal'
       <?php  
  include_once '../acoes/escreve-mensagem.php';
 
+
+ $aparelho_valo=$_SESSION['aparelho_compra_valor_total'];
+ $material_valo=$_SESSION['material_valor_total'];
+ $capital_valor=$_SESSION['captal'];
+ $tototal= $material_valo+$capital_valor+$aparelho_valo;
 ?>
 
 
       <h2>Patrimonio</h2>
-      <p>Capital:0,00R$ --- Aparelho:0,00R$ --- Material:0,00R$ --- Total:0,00R$</p>
+      <p>Capital:<?=$capital_valor?>R$ --- Aparelho:<?=$aparelho_valo?>R$ --- Material:<?= $material_valo?>R$ --- Total:<?=$tototal?>R$</p>
 
       
       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>

@@ -28,11 +28,21 @@
             $data  =mysqli_real_escape_string($con, $_POST['data_recebimento']);
 
 
+         
+
+            $valocomp=  $_SESSION['aparelho_compra_valor_total'];
+            $gastos_valor=$_SESSION['gastos_valor'];
+           $material_valo= $_SESSION['material_valor_total'];
+            $captal= $_SESSION['captal'];
+        
+          
+            $aparelho_valo=$valocomp;
             $capital_valor= $captal+ $capital_add;
-
-$sql = "INSERT INTO movimentacao_financeir (empresa_id,descricao,id_usuario,capital_valor,data)
-
-VALUES ('$empresa_id','$descricao','$id_usuario','$capital_valor','$data')";
+        
+            $sql = "INSERT INTO movimentacao_financeir (empresa_id,descricao,id_usuario,capital_valor,aparelho_valo,gastos_valor,material_valo,data)
+            
+            VALUES ('$empresa_id','$descricao','$id_usuario','$capital_valor','$aparelho_valo','$gastos_valor','$material_valo','$data')"; 
+            
 
        
         // EXECUTAR INSTRUCAO SQL E VERIFICAR SUCESSO

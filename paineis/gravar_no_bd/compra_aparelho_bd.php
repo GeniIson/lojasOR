@@ -16,9 +16,9 @@
 
         if( $_SESSION['ID_emprersa'] ==$ipresa_verificador  ){ 
   
-            $captal= $_SESSION['captal'];
+         
             $id_usuario   =$_SESSION['id_usuario'];
-            $valocomp=  $_SESSION['aparelho_compra_valor_total'];
+            
 
 
             $empresa_id   =mysqli_real_escape_string($con, $_POST['id_impresa']);
@@ -29,20 +29,25 @@
             $data  =mysqli_real_escape_string($con, $_POST['data_recebimento']);
 
 
-            $valor_compra= $valocomp+ $valor_compra_add;
-
-$sql = "INSERT INTO aparelhos (id_empresa,descricao,valor_compra,data)
+$sql = "INSERT INTO aparelhos (id_empresa,descricao,valor_compra,data_compra)
 
 VALUES ('$empresa_id','$descricao','$valor_compra_add','$data')";
 
 if(mysqli_query($con, $sql)) {
 
 
-    $capital_valor= $captal-  $valor_compra_add;
+    $valocomp=  $_SESSION['aparelho_compra_valor_total'];
+    $gastos_valor=$_SESSION['gastos_valor'];
+   $material_valo= $_SESSION['material_valor_total'];
+    $captal= $_SESSION['captal'];
 
-    $sql = "INSERT INTO movimentacao_financeir (empresa_id,descricao,id_usuario,capital_valor,data)
+    $capital_valor= $captal-  $valor_compra_add;
+    $aparelho_valo=$valocomp+ $valor_compra_add;
+
+
+    $sql = "INSERT INTO movimentacao_financeir (empresa_id,descricao,id_usuario,capital_valor,aparelho_valo,gastos_valor,material_valo,data)
     
-    VALUES ('$empresa_id','$descricao','$id_usuario','$capital_valor','$data')"; 
+    VALUES ('$empresa_id','$descricao','$id_usuario','$capital_valor','$aparelho_valo','$gastos_valor','$material_valo','$data')"; 
     
     
                       } 

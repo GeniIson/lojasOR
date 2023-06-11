@@ -27,7 +27,7 @@
     <label for='data_pagamento' class='form-label'>Data da compra</label>
         
           
-    <input type='date' class='form-check-label' id='data_pagamento'name='data_recebimento' value='<?=$data_i?>'>
+    <input type='date' class='form-check-label' id='data_pagamento'name='data_recebimento' value='<?=$data_i?>'> 
       </span>
      <br>
      <label for='tipo' class='form-check-label'>Tipo</label>
