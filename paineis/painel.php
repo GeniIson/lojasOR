@@ -451,7 +451,7 @@ data-bs-toggle='modal'
               <th scope="col">Descrição</th>
               <th scope="col">Data</th>
               <th scope="col">Valor Compra</th>
-              <th scope="col">Valor Venda</th>
+             
               <th scope="col">Ação</th>
               
             </tr>
@@ -468,35 +468,62 @@ data-bs-toggle='modal'
           </tbody>
         </table>
 
-
-        <h2>Aparelhos Vedidos</h2>
+        
+      <h2>Aparelhos a venda</h2>
       <div class="table-responsive small">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
               <th scope="col">Codigo</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Data</th>
+            
+              <th scope="col">Preso de Venda</th>
+              <th scope="col">Ação</th>
+              
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>OR1,001</td>
+
+
+          <?php
+
+          include "ler_no_bd/aparelho_a_venda.php";
+          ?>
            
-            </tr>
-            <tr>
-              <td>1,002</td>
-             
-            </tr>
-            <tr>
-              <td>1,003</td>
-             
-            </tr>
-           
+                      
           </tbody>
         </table>
+
+
+        <h2>Aparelhos vedido</h2>
+        <div class="table-responsive small">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Codigo</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Data</th>
+              <th scope="col">Valor compra</th>
+              <th scope="col">Valor Venda</th>
+           
+              
+            </tr>
+          </thead>
+          <tbody>
+
+
+          <?php
+
+          include "ler_no_bd/aparelho_vendidos.php";
+          ?>
+           
+                      
+          </tbody>
+        </table>
+
 
 
 
