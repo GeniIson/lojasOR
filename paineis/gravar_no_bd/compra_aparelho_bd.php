@@ -23,25 +23,25 @@
             $tipo   =mysqli_real_escape_string($con, $_POST['tipo']);
             $empresa_id   =mysqli_real_escape_string($con, $_POST['id_impresa']);
             $descricao  =mysqli_real_escape_string($con, $_POST['Descri']);
-            
+            $descricao_compra=mysqli_real_escape_string($con, $_POST['Descri_compra']);
 
             $valor_compra_add=mysqli_real_escape_string($con, $_POST['valor2']);
             $data  =mysqli_real_escape_string($con, $_POST['data_recebimento']);
 
 
-$sql = "INSERT INTO aparelhos (tipo,id_empresa,descricao,valor_compra,data_compra,status)
+$sql = "INSERT INTO aparelhos (tipo,id_empresa,descricao,descricao_compra,valor_compra,data_compra,status)
 
-VALUES ('$tipo','$empresa_id','$descricao','$valor_compra_add','$data','Comprado')";
+VALUES ('$tipo','$empresa_id','$descricao','$descricao_compra','$valor_compra_add','$data','Comprado')";
 
 if(mysqli_query($con, $sql)) {
 
 
     $valocomp=  $_SESSION['aparelho_compra_valor_total'];
-    $gastos_valor=$_SESSION['gastos_valor'];
+    $gastos_valor=$_SESSION['gastos_valor_total'];
    $material_valo= $_SESSION['material_valor_total'];
     $captal= $_SESSION['captal'];
 
-    $capital_valor= $captal-  $valor_compra_add;
+    $capital_valor= $captal-$valor_compra_add;
     $aparelho_valo=$valocomp+ $valor_compra_add;
 
 

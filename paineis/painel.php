@@ -439,7 +439,7 @@ data-bs-toggle='modal'
 
 
 
-
+<hr>
 
       <h2>Aparelhos comprados</h2>
       <div class="table-responsive small">
@@ -447,7 +447,7 @@ data-bs-toggle='modal'
           <thead>
             <tr>
               <th scope="col">Codigo</th>
-              <th scope="col">Tipo</th>
+              <th scope="col">Aparelho</th>
               <th scope="col">Descrição</th>
               <th scope="col">Data</th>
               <th scope="col">Valor Compra</th>
@@ -468,7 +468,7 @@ data-bs-toggle='modal'
           </tbody>
         </table>
 
-        
+      <hr>  
       <h2>Aparelhos a venda</h2>
       <div class="table-responsive small">
         <table class="table table-striped table-sm">
@@ -496,7 +496,7 @@ data-bs-toggle='modal'
           </tbody>
         </table>
 
-
+<hr>
         <h2>Aparelhos vedido</h2>
         <div class="table-responsive small">
         <table class="table table-striped table-sm">

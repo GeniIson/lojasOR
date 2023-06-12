@@ -14,14 +14,13 @@
       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
     </div>
   
-    <form id="meu-formulario23" action='gravar_no_bd/compra_aparelho_bd.php' method='POST'>
+    <form id="meu-formulario2" action='gravar_no_bd/compra_aparelho_bd.php' method='POST'>
 
     
 
   
 
     <div class='modal-body'>
-    <div class='row' >
  
     <span style=' float:right;'>
    
@@ -30,9 +29,7 @@
           
     <input type='date' class='form-check-label' id='data_pagamento'name='data_recebimento' value='<?=$data_i?>'> 
       </span>
-      
-     
-    <div class='col-lg-4' >
+     <br>
      <label for='tipo' class='form-check-label'>Tipo</label>
       
       <select class='form-select' id='tipo' name='tipo' required>
@@ -45,33 +42,22 @@
        ?>    
         </optgroup>
       </select>
-      </div>
-    <div class='col-lg-4' >
+      <br>
 
     <label for='Marca' class='form-check-label'>Marca</label>
     
     
     <input type='text' id="Marca" class='form-control'  name='Marcar' placeholder='Ex: LG'>
-    </div>
-    <div class='col-lg-4' >
+    <br>
     <label for='Modelo' class='form-check-label'>Modelo</label>
     
     
     <input type='text' id="Modelo" class='form-control'  name='Modelo' placeholder='Ex:Pt32ls2050'>
-    </div>
-    </div>
-    
-    <label for='Descri' class='form-check-label'>Descrição do aparelho</label>
-    
-    
-    <input type='text' id="Descri" class='form-control'  name='Descri' placeholder='Ex:Tv lg de 32 polegadas'>
     <br>
-
-    
-    <label for='Descri_compra' class='form-check-label'>Descreva onde e a quem foi comprado</label>
+    <label for='Descri' class='form-check-label'>Descrição</label>
     
     
-    <input type='text' id="Descri_compra" class='form-control'  name='Descri_compra' placeholder='Ex:Comprada a João na Cidade onde mora'>
+    <input type='text' id="Descri" class='form-control'  name='Descri' placeholder='Ex:Tv lg de 32 polegadas comprada a João'>
     <br>
    
   
@@ -122,7 +108,7 @@
       event.preventDefault();
 
       // verifica se os campos estão vazios
-      var formulario = document.getElementById('meu-formulario23');//este pega o formulario que quero usa
+      var formulario = document.getElementById('meu-formulario2');//este pega o formulario que quero usa
       var inputs = formulario.getElementsByTagName('input');//este pega o tipo de input etc
       
         if (inputs['valor2'].value.trim() == '') {
@@ -137,11 +123,6 @@
         var msg = formulario.getElementsByTagName('input');
         if (msg['Descri'].value.trim() == '') {
           alert('Mensagem vazia! digite a descrição');
-          return;
-        }
-        var mcc = formulario.getElementsByTagName('input');
-        if (mcc['Descri_compra'].value.trim() == '') {
-          alert('Mensagem vazia! Descreva onde e a quem voce comprou a tv');
           return;
         }
 

@@ -50,6 +50,6 @@
 
 
   $_SESSION['aparelho_compra_valor_total']=$aparelho_valo;
-  $_SESSION['gastos_valor']=$gastos_valor;
+  $_SESSION['gastos_valor_total']=$gastos_valor;
   $_SESSION['material_valor_total']=$material_valo;
   $_SESSION['captal']=$capital_valor;
