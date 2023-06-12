@@ -1,10 +1,5 @@
 <?php
-///cores para as linhas do grafico
-$cor_total='0';
-$cor_cap='#007bff';
-$cor_apa='green';
-$cor_gasto='red';
-$cor_mate='#4d0080';
+
 
 
 // Função para obter os dados da tabela
@@ -92,8 +87,8 @@ $jsonData4 = json_encode($data['newData4']);
                 {
                     data: <?php echo $jsonData0; ?>,
                     lineTension: 0,
-                    backgroundColor: '<?= $cor_total?>',
-                    borderColor: '<?=$cor_total?>',
+                    backgroundColor: 'transparent',
+                    borderColor: '0',
                     borderWidth: 4,
                     pointBackgroundColor: '0'
                 },
@@ -101,7 +96,7 @@ $jsonData4 = json_encode($data['newData4']);
                     data: <?php echo $jsonData1; ?>,
                     lineTension: 0,
                     backgroundColor: 'transparent',
-                    borderColor: '<?= $cor_cap?>',
+                    borderColor: '#007bff',
                     borderWidth: 4,
                     pointBackgroundColor: '0'
                 },
@@ -109,7 +104,7 @@ $jsonData4 = json_encode($data['newData4']);
                     data: <?php echo $jsonData2; ?>,
                     lineTension: 0,
                     backgroundColor: 'transparent',
-                    borderColor:'<?=$cor_apa?>',
+                    borderColor: 'green',
                     borderWidth: 4,
                     pointBackgroundColor: '0'
                 },
@@ -117,7 +112,7 @@ $jsonData4 = json_encode($data['newData4']);
                     data: <?php echo $jsonData3; ?>,
                     lineTension: 0,
                     backgroundColor: 'transparent',
-                    borderColor:'<?=$cor_mate?>',
+                    borderColor: '#4d0080',
                     borderWidth: 4,
                     pointBackgroundColor: '0'
                 },
@@ -125,10 +120,11 @@ $jsonData4 = json_encode($data['newData4']);
                     data: <?php echo $jsonData4; ?>,
                     lineTension: 0,
                     backgroundColor: 'transparent',
-                    borderColor:'<?=$cor_gasto?>',
+                    borderColor: 'red',
                     borderWidth: 3,
                     pointBackgroundColor: '0'
-                }]
+                }
+            ]
         };
 
         const myChart = new Chart(ctx, {

@@ -1,5 +1,10 @@
 <?php
  $idimpresa=$_SESSION['ID_emprersa'];
+ $cor_total='0';
+$cor_cap='#007bff';
+$cor_apa='green';
+$cor_gasto='red';
+$cor_mate='#4d0080';
 ?>
 
 
@@ -357,7 +362,7 @@ data-bs-toggle='modal'
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#people"/></svg>
-              Donos
+              Investidor
               </a>
             </li>
          
@@ -432,8 +437,38 @@ data-bs-toggle='modal'
 
 
       <h2>Patrimonio</h2>
-      <p>Capital:<?=$capital_valor?>R$ --- Aparelho:<?=$aparelho_valo?>R$ --- Material:<?= $material_valo?>R$ --- Total:<?=$tototal?>R$</p>
+      <p><strong style="color:<?=$cor_cap?>"><span style="font-size: 12px;">Capital:</span> <?=$capital_valor?><span style="font-size: 10px;">R$</span></strong> --- <strong style="color:<?=$cor_apa?>"><span style="font-size: 12px;">Aparelhos:</span></strong></span> ---<strong style="color:<?=$cor_mate?>"><span style="font-size: 12px;"> Materiais:</span></strong></span> --- <strong style="color:<?=$cor_gasto?>"><span style="font-size: 12px;">Dispesas:</span></strong></span>
+      --- <strong style="color:<?=$cor_total?>"><span style="font-size: 12px;">Total:</span></p>
 
+      <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col" style="color:<?=$cor_cap?>">Capital</th>
+              <th scope="col">Aparelhos</th>
+              <th scope="col">Materiais</th>
+              <th scope="col">Dispesas</th>
+              <th scope="col">Total</th>
+             
+             
+              
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+              <td><?=$capital_valor?><span style="font-size: 10px;">R$</span></td>
+              
+              <td><?=$aparelho_valo?><span style="font-size: 10px;">R$</span></td>
+              <td><?= $material_valo?><span style="font-size: 10px;">R$</span></td>
+              <td><?=$tototal?><span style="font-size: 10px;">R$</span></td>
+              <td><?=$tototal?><span style="font-size: 10px;">R$</strong></span></td>
+                       
+          
+            </tr>
+           
+                      
+          </tbody>
+        </table>
       
       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
@@ -475,11 +510,13 @@ data-bs-toggle='modal'
           <thead>
             <tr>
               <th scope="col">Codigo</th>
-              <th scope="col">Tipo</th>
-              <th scope="col">Descrição</th>
-              <th scope="col">Data</th>
-            
+             
+              <th scope="col">Aparelho</th>
               <th scope="col">Preso de Venda</th>
+              <th scope="col">Informaçõe extras</th>
+           
+            
+              
               <th scope="col">Ação</th>
               
             </tr>

@@ -1,10 +1,11 @@
 <?php
-///cores para as linhas do grafico
+
 $cor_total='0';
 $cor_cap='#007bff';
 $cor_apa='green';
 $cor_gasto='red';
 $cor_mate='#4d0080';
+
 
 
 // Função para obter os dados da tabela
@@ -13,6 +14,8 @@ function getChartData() {
 
     $dataInicial ='2023-06-1';//mysqli_real_escape_string($con, $_POST['data_inicial']);
     $dataFinal ='2024-06-11';//mysqli_real_escape_string($con, $_POST['data_Finall']);
+
+    
 
     
     $sql233 = "SELECT * FROM movimentacao_financeir WHERE data BETWEEN '$dataInicial' AND '$dataFinal'";
@@ -86,14 +89,16 @@ $jsonData4 = json_encode($data['newData4']);
     <script>
         const ctx = document.getElementById('myChart');
 
+
+var co = "<?php echo $cor1; ?>";
         const data = {
             labels: <?php echo $jsonLabels; ?>,
             datasets: [
                 {
                     data: <?php echo $jsonData0; ?>,
                     lineTension: 0,
-                    backgroundColor: '<?= $cor_total?>',
-                    borderColor: '<?=$cor_total?>',
+                    backgroundColor: 'transparent',
+                    borderColor: '<?= $cor_total?>',
                     borderWidth: 4,
                     pointBackgroundColor: '0'
                 },
@@ -121,6 +126,7 @@ $jsonData4 = json_encode($data['newData4']);
                     borderWidth: 4,
                     pointBackgroundColor: '0'
                 },
+                
                 {
                     data: <?php echo $jsonData4; ?>,
                     lineTension: 0,
@@ -128,11 +134,17 @@ $jsonData4 = json_encode($data['newData4']);
                     borderColor:'<?=$cor_gasto?>',
                     borderWidth: 3,
                     pointBackgroundColor: '0'
-                }]
+                }
+            ]
+            
         };
 
         const myChart = new Chart(ctx, {
             type: 'line',
             data: data
-        });
+        },
+        
+       
+        
+        );
     </script>

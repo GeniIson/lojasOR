@@ -6,7 +6,7 @@
 
 
   
-    $sql = "SELECT * FROM aparelhos WHERE status LIKE 'venda' ORDER BY id DESC ";
+    $sql = "SELECT * FROM aparelhos WHERE status LIKE 'venda' ORDER BY id ASC ";
     $resultado = mysqli_query($con, $sql);
 
 
@@ -17,30 +17,19 @@ while($dados = mysqli_fetch_array($resultado)) {
     $tipo  = $dados['tipo'];
     $descricao   = $dados['descricao'];
     $valor_compra   = $dados['valor_compra'];
-    $data_compra  = $dados['data_compra'];
-    $valor_venda  = $dados['valor_venda'];
+    $extra = $dados['extra'];
+    $valor_venda  = $dados['valor_usado'];
 
 echo"
 <tr>
               <td>OR$id_ap</td>
-              <td>$tipo</td>
+              
               <td>$descricao</td>
-              <td>$data_compra</td>
+              <td style='font-size:16px;'>$valor_venda</td>
+              <td>$extra</td>
           
-              <td><a href='#'
-        
-              data-bs-toggle='modal' 
-              data-bs-target='#compra'
-              style= 'text-decoration: none; ' ;
-              
-              >$valor_venda</a></td>              
-              <td> <a href='#'
-        
-              data-bs-toggle='modal' 
-              data-bs-target='#compra'
-              style= 'text-decoration: none; ' ;
-              
-              >
+                       
+              <td> 
                           
             <a href='#'
         
