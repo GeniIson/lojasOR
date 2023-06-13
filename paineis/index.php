@@ -17,4 +17,5 @@ include "modais/ijeta_captal.php";include "modais/cadastra_usuario.php";
 include "modais/compra_aparelho.php";
 include "modais/cadastra_empresa.php";
 include "modais/vender_imformativo.php";include "modais/iserir_despesa.php";
+include "modais/x_imformativo.php";
 

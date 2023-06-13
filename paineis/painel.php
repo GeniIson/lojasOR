@@ -322,9 +322,8 @@ data-bs-toggle='modal'
 
             <li class="nav-item">     
 <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#"
-      
 data-bs-toggle='modal' 
-       data-bs-target='#inseri_captal'
+       data-bs-target='#x_ifor'
 
 
 
@@ -338,7 +337,9 @@ data-bs-toggle='modal'
             
             </li>
             <li class="nav-item">     
-<a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+<a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#"
+data-bs-toggle='modal' 
+       data-bs-target='#x_ifor'>
              
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
@@ -349,7 +350,9 @@ data-bs-toggle='modal'
             
             </li>
             <li class="nav-item">     
-<a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+<a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#"
+data-bs-toggle='modal' 
+       data-bs-target='#x_ifor'>
              
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-coin" viewBox="0 0 16 16">
   <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z"/>
@@ -376,7 +379,12 @@ data-bs-toggle='modal'
             </li>
 
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="#"
+              
+              data-bs-toggle='modal' 
+       data-bs-target='#x_ifor'
+       
+       >
                 <svg class="bi"><use xlink:href="#people"/></svg>
               Investidor
               </a>
@@ -388,7 +396,8 @@ data-bs-toggle='modal'
           <ul class="nav flex-column mb-auto">
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#"
- 
+              data-bs-toggle='modal' 
+       data-bs-target='#x_ifor'
        >
                 <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
                 Configurações 
@@ -413,7 +422,7 @@ data-bs-toggle='modal'
                                   </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="../acoes/?logout">
                 <svg class="bi"><use xlink:href="#door-closed"/></svg>
                 Sair             </a>
             </li>

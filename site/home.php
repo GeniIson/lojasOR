@@ -177,7 +177,11 @@
     
     
     
-    <a href="../paineis" class="w-10 btn btn-primary btn-purple btn-custom">Entrar</a>
+    <a href="../paineis" class="w-10 btn btn-primary btn-purple btn-custom"
+    
+    data-bs-toggle='modal' 
+       data-bs-target='#logrr'
+       >Entrar</a>
 
     </div>
   </nav>
