@@ -2,8 +2,13 @@
    if (!isset($_SESSION)) {
     session_start();
   }             // iniciar sessao
-  //  require_once 'conexao.php'; // chamar conexao
 
+  $capital_valor  =      0;           
+  $aparelho_valo  =     0;             
+  $material_valo =   0;              
+  $gastos_valor  = 0;
+  //  require_once 'conexao.php'; // chamar conexao
+ 
 
     // pegar os dados postados e fazer o escape
     
@@ -22,6 +27,7 @@
         $dados     = mysqli_fetch_array($resultado);
         
         // CRIAR VARIAVEIS DE SESSAO
+       
       
         $capital_valor  =                   $dados['capital_valor'];
         $aparelho_valo  =                   $dados['aparelho_valo'];

@@ -8,8 +8,10 @@
   
     $sql = "SELECT * FROM aparelhos WHERE status LIKE 'venda' ORDER BY id ASC ";
     $resultado = mysqli_query($con, $sql);
+?>
 
 
+<?php
 
 while($dados = mysqli_fetch_array($resultado)) { 
     // criar variaveis para cada dado do array associativo
@@ -34,7 +36,7 @@ echo"
             <a href='#'
         
               data-bs-toggle='modal' 
-              data-bs-target='#compra'
+              data-bs-target='#vender$id_ap'
               style= 'text-decoration: none; ' ;
               
               >
@@ -44,12 +46,15 @@ echo"
             Vender
             </a> 
               </td>
-            </tr>";
+            </tr>
+
+
+";
 
 
 
 
-
+include "modais/vender_aparelho.php";
 
 
 

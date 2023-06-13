@@ -126,18 +126,6 @@ $cor_mate='#4d0080';
 
   </head>
   <body>
-
-
-  <?php
-
-if (  isset($_GET['por_a_venda'])) {
-///modal criando em php que chama é a função get
-  include 'modais_php/por_aparelho_p_venda.php';
-  
-}
-
-
-?>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     
     </svg>
@@ -361,11 +349,7 @@ data-bs-toggle='modal'
             
             </li>
             <li class="nav-item">     
-<a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#"
-data-bs-toggle='modal' 
-       data-bs-target='#iserir_despesa'
-       
-       >
+<a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
   <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -474,7 +458,7 @@ data-bs-toggle='modal'
               
               <td><?=$aparelho_valo?><span style="font-size: 10px;">R$</span></td>
               <td><?= $material_valo?><span style="font-size: 10px;">R$</span></td>
-              <td><?= $gastos_valor?><span style="font-size: 10px;">R$</span></td>
+              <td><?=$tototal?><span style="font-size: 10px;">R$</span></td>
               <td><?=$tototal?><span style="font-size: 10px;">R$</strong></span></td>
                        
           
@@ -584,7 +568,16 @@ data-bs-toggle='modal'
     </main>
   </div>
 </div>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js" integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG" crossorigin="anonymous"></script>
+    
+    
+    
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js" integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG" crossorigin="anonymous"></script>
 <?php
 //chamar arquivo gerandor do grafico
 
@@ -603,6 +596,3 @@ include 'grafico/movimeta_grafico_em_js.php';
 
 
 </html>
-
-
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

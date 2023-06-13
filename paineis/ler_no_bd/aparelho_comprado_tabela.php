@@ -47,67 +47,7 @@ echo"
             
             
             
-            
-            
-            <div class='modal fade' id='transforma$id_ap' tabindex='-1' aria-labelledby='transforma$id_ap' aria-hidden='true'>
-<div class='modal-dialog'>
-  <div class='modal-content'>
-    <div class='modal-header'>
-      <h5 class='modal-title' id='exampleModalLabel'>Tranforma aparelho</h5>
-    
-   
-      <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-    </div>
-    <p>Trasfome o aparelho em aguma destas opções!</p>
-
-
-
-   
-  
-         
-        
-    <p> <a href='#'
-    class='w-100 btn btn-primary btn-purple btn-custom'
-    data-bs-toggle='modal' 
-    data-bs-target='#a_venda$id_ap'
-    style= 'text-decoration: none; ' ;
-    
-    >A venda</a></p> 
-    <p> <a href='#'
-    class='w-100 btn btn-primary btn-purple btn-custom'
-    data-bs-toggle='modal' 
-    data-bs-target='#material$id_ap'
-    style= 'text-decoration: none; ' ;
-    
-    >Material</a></p> 
-    <p>  <a href='#'
-    class='w-100 btn btn-primary btn-purple btn-custom'
-    data-bs-toggle='modal' 
-    data-bs-target='#Reciclagem$id_ap'
-    style= 'text-decoration: none; ' ;
-    
-    >Reciclagem</a></p> 
-         
-         
-   
-   
-         
-          
-     
-        </div> 
-        
-        </div>
-      </div>
-    </div>
-";
-
-
-
-
-include "modais/a_venda_aparelho.php";
-
-
-
-
+        ";
+        include "modais/tranforma_aparelho.php";
 
 }?>

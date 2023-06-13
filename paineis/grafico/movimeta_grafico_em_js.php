@@ -130,9 +130,20 @@ $jsonData4 = json_encode($data['newData4']);
                     pointBackgroundColor: '0'
                 }]
         };
-
         const myChart = new Chart(ctx, {
-            type: 'line',
-            data: data
-        });
+    type: 'line',
+    data: data,
+    options: {
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          boxPadding: 3
+        }
+      }
+    }
+});
+
+
     </script>

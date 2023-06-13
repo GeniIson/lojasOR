@@ -8,7 +8,7 @@
     session_start(); 
    
   
-    if(isset($_POST['bt_injetar'])) {
+    if(isset($_POST['bt_inserir'])) {
         
         $ipresa_verificador =mysqli_real_escape_string($con, $_POST['id_impresa']);
 
@@ -21,10 +21,10 @@
 
 
             $empresa_id   =mysqli_real_escape_string($con, $_POST['id_impresa']);
-            $descricao  =mysqli_real_escape_string($con, $_POST['Descri']);
+            $descricao  =mysqli_real_escape_string($con, $_POST['Descri_dispesa']);
             
 
-            $capital_add=mysqli_real_escape_string($con, $_POST['valor']);
+            $despesa_add=mysqli_real_escape_string($con, $_POST['valor']);
             $data  =mysqli_real_escape_string($con, $_POST['data_recebimento']);
 
 
@@ -37,11 +37,13 @@
         
           
             $aparelho_valo=$valocomp;
-            $capital_valor= $captal+ $capital_add;
+            $capital_valor= $captal- $despesa_add;
+
+            $despesa_2= $gastos_valor + $despesa_add;
         
             $sql = "INSERT INTO movimentacao_financeir (empresa_id,descricao,id_usuario,capital_valor,aparelho_valo,gastos_valor,material_valo,data)
             
-            VALUES ('$empresa_id','$descricao','$id_usuario','$capital_valor','$aparelho_valo','$gastos_valor','$material_valo','$data')"; 
+            VALUES ('$empresa_id','$descricao','$id_usuario','$capital_valor','$aparelho_valo',' $despesa_2','$material_valo','$data')"; 
             
 
        
