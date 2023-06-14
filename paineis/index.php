@@ -1,5 +1,33 @@
 <?php
-   session_start();   
+if (!isset($_SESSION)) {
+  session_start();
+} 
+
+ $senha2=1;
+ 
+ 
+if(isset($_GET['bt_entrar'])) {
+    
+    
+    $_SESSION['Bem_vido'] =$_GET['senha'] ;
+     
+}
+
+if (isset($_SESSION)) {
+    
+     $senha2=  $_SESSION['Bem_vido'] ;
+
+} 
+
+
+if( $senha2 == 'c3000'){
+    
+    
+    
+      
+        $_SESSION['mensagem']  = $_SESSION['nome']." <h1>Bem vido!</h1>";
+        $_SESSION['status']    = "success";
+
 
 
  //esta parte para inia e indentificar
@@ -19,3 +47,10 @@ include "modais/cadastra_empresa.php";
 include "modais/vender_imformativo.php";include "modais/iserir_despesa.php";
 include "modais/x_imformativo.php";
 
+}
+else{
+        // CRIAR VARIAVEIS DE SESSAO
+        $_SESSION['mensagem'] = "Erro no login! Usuario ou senha incorretos {$senha2}";
+        $_SESSION['status'] = "danger";
+        header('Location: ../'); // REDIRECIONAR PARA O INDEX
+    }

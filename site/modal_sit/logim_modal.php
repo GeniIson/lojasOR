@@ -16,7 +16,7 @@
 <div class='modal-body' style="text-align: center; background-color: #00000015;  ">
 
 
-<form action="../paineis" method="POST">
+<form action="../paineis/" method="GET">
 
     
  

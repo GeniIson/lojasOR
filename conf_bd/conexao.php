@@ -1,9 +1,9 @@
 <?php
 
-    $host     = "127.0.0.1"; // use localhost caso nao funcione o endereco ip
-    $user     = "root";
-    $password = "";
-    $dbname   = "dados_or";
+    $host     = "127.0.0.1:3306"; // use localhost caso nao funcione o endereco ip
+    $user     = "u309471170_admin";
+    $password = "G101990g";
+    $dbname   = "u309471170_lojas_or";
 
     // CONEXAO
     @$con = mysqli_connect($host, $user, $password, $dbname);
