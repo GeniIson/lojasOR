@@ -4,7 +4,7 @@
     //session_start();
   //  require_once 'verifica-logado.php';
     // chamar nossa conexao
-    require "../../conf_bd/conexao.php";
+    include "../../../config/conf_bd_or/conexao.php";
    
    
   
