@@ -1,6 +1,6 @@
 <?php
-    session_start();            // iniciar sessao
-    require_once '../conf_bd/conexao.php'; // chamar conexao
+ ///   session_start();            // iniciar sessao
+    require_once '../conf_bd/conexao.php'; // chamar conexao 
 
 if(isset($_POST['bt_entrar'])) {
     // pegar os dados postados e fazer o escape

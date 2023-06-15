@@ -6,6 +6,8 @@
     // chamar nossa conexao
     include "../../../config/conf_bd_or/conexao.php";
     session_start(); 
+
+
    
   
     if(isset($_POST['bt_injetar'])) {
