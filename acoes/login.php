@@ -35,7 +35,12 @@ if(isset($_POST['bt_entrar'])) {
         
         $_SESSION['mensagem']  = $_SESSION['nome']." <h1>Bem vido!</h1>";
      
-     
+        function gerarNovoToken()
+        {
+            return bin2hex(random_bytes(32));
+        }
+        $_SESSION['csrf_token'] = gerarNovoToken();
+    
         
      
             

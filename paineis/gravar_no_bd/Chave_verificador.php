@@ -14,7 +14,7 @@ if(!isset($_GET['Cript'])) {
     if(isset($_GET['Cript'])) {
         $chave= $_GET['Cript'];
  
-        if($chave!= $_SESSION['Chave']){
+        if($chave!= $_SESSION['csrf_token']){
  
          $_SESSION['mensagem'] = "Não foi possível inserir informações";
          $_SESSION['status']   = "danger";
