@@ -8,7 +8,10 @@
   
     $sql = "SELECT * FROM aparelhos WHERE status LIKE 'venda' ORDER BY id ASC ";
     $resultado = mysqli_query($con, $sql);
+?>
 
+
+<?php
 
 while($dados = mysqli_fetch_array($resultado)) { 
     // criar variaveis para cada dado do array associativo
