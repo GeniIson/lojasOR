@@ -8,20 +8,22 @@
    
    
   
-    if(isset($_POST['bt_cadstra_imp'])) {
-        $nome   =mysqli_real_escape_string($con, $_POST['nome_empresa']);
+    if(isset($_POST['bt_cadstra_uso'])) {
+        $nome   =mysqli_real_escape_string($con, $_POST['nome_uso']);
         $contato   =mysqli_real_escape_string($con, $_POST['contato']);
+        $cargo_uso  =mysqli_real_escape_string($con, $_POST['cargo_uso']);
+        $id_impresa   =mysqli_real_escape_string($con, $_POST['id_impresa']);
+        $permi_a   =mysqli_real_escape_string($con, $_POST['permi_a']);
+        $email   =mysqli_real_escape_string($con, $_POST['email']);
+     
+        $senha = md5(mysqli_real_escape_string($con, $_POST['senha']));
 
-        $cnpj   =mysqli_real_escape_string($con, $_POST['cnpj']);
-
-        $patrimonio_inicial   =mysqli_real_escape_string($con, $_POST['patrimonio_inicial']);
         $data_inicial   =mysqli_real_escape_string($con, $_POST['data_inicial']);
 
-if(){
 
-    $sql = "INSERT INTO empresa (nome,contato,cnpj,patrimonio_inicial,data_inicial)
+    $sql = "INSERT INTO usuario (nome,contato,id_empresa,id_permicao,data_inicial,email,senha,cargo)
 
-    VALUES ('$nome','$contato','$cnpj','$patrimonio_inicial','$data_inicial')";
+    VALUES ('$nome','$contato','$id_impresa','$permi_a','$data_inicial','$email','$senha','$cargo_uso')";
 
 }
 
@@ -29,7 +31,7 @@ if(){
        
         // EXECUTAR INSTRUCAO SQL E VERIFICAR SUCESSO
         if(mysqli_query($con, $sql)) {
-            $_SESSION['mensagem'] = "impresa cadastrada com sucesso!";
+            $_SESSION['mensagem'] = "Usuario cadastrado com sucesso!";
             $_SESSION['status']   = "success";
 
            header("Location: ../");
@@ -44,14 +46,8 @@ if(){
        echo"testtt";
     }
     
-   }
+   
 
-   else {
-    $_SESSION['mensagem'] = "Não foi possível inserir as informações";
-    $_SESSION['status']   = "danger";
-    header("Location: ../");
-   echo"testtt";
-}
         // FECHAR CONEXAO
        
      mysqli_close($con);

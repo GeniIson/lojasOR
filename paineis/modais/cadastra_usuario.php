@@ -6,13 +6,13 @@
 <div class='modal-dialog'>
   <div class='modal-content'>
     <div class='modal-header'>
-      <h5 class='modal-title' id='exampleModalLabel'>Cadastra uma novo usuario </h5>
+      <h5 class='modal-title' id='exampleModalLabel'>Cadastra um novo usuario </h5>
           
    
       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
     </div>
     
-    <form id="meu-formulario3" action='gravar_no_bd/cadastraimpresa_bd.php' method='POST'>
+    <form id="meu-formulario555555" action='gravar_no_bd/cadastra_usuario_bd.php' method='POST'>
 
     
 
@@ -22,54 +22,76 @@
  
     <span style=' float:right;'>
    
-    <label for='data_inicial' class='form-label'>Data inicial da atividade</label>
+    <label for='data_inicial' class='form-label'>Data do cadastro</label>
         
           
     <input type='date' class='form-check-label' id='data_inicial'name='data_inicial' value='<?=$data_i?>'>
       </span>
-     <br>
+    
+   
 
-    <label for='nome_empresa' class='form-check-label'>Nome da empresa</label>
+   <label for='cargo_uso' class='form-check-label'>Cargo</label>
+   
+   
+   <input type='text' id="cargo_uso" name="cargo_uso" class='form-control' placeholder='Ex:Gerente'required>
+   
+   
+
+   <label for='nome_uso' class='form-check-label'>Nome completo</label>
+   
+   
+   <input type='text' id="nome_uso" name="nome_uso" class='form-control' placeholder='Ex:José da Silva'required>
+  
     
-    
-    <input type='text' id="nome_empresa" name="nome_empresa" class='form-control' placeholder='Ex:Lojas OR'>
-    <br>
-    <label for='cnpj' class='form-check-label'>Cnpj/CPF</label>
-    
-    
-    <input type='text' id="bnpj" name="cnpj" class='form-control' placeholder='Ex:00000000-00'>
-    <br>
     <label for='contato' class='form-check-label'>Contato</label>
     
     
-    <input type='text' id="contato" name="contato" class='form-control' placeholder='Ex: 87 9888888'>
+    <input type='text' id="contato" name="contato" class='form-control' placeholder='Ex: 87 9888888'required>
     <br>
-   
-   
-  
-         
+    <label for="email"class='form-check-label'>E-mail</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text">@</span>
+          <input type="text" class="form-control" id="email" name="email" placeholder="email@provedor.com" required>
+        <div class="invalid-feedback">
+            Digite o seu e-mail.
+          </div>
+        </div>
+        <label for="senha" class='form-check-label'>Senha</label>
+        <div class="input-group has-validation">
+          <input type="password" class="form-control" id="senha" name="senha" placeholder="" required>
+        <div class="invalid-feedback">
+            Digite uma senha.
+          </div>
+        </div>
+        <label for="senha2" class='form-check-label'>Confirme a senha</label>
+        <div class="input-group has-validation">
+          <input type="password" class="form-control" id="senha2" name="senha2" placeholder="" required>
+        <div class="invalid-feedback">
+            Digite uma senha.
+          </div>
+        </div>
+
+        <label for='permi_a' class='form-check-label'><strong style='text-align: left; font-size: 14px';>Permiçoes</strong></label>
+      
+      <select class='form-select'id='permi_a' name='permi_a' required>
+      <option value='0'></option>
+          <option value='1'>Adm</option>
+          <option value='2'>Comun</option>
         
-         
-         
-         
           
+        </optgroup>
+      </select><br>
     
-         <label for='patrimonio_inicial' class='form-check-label'>Patrimonio inicial</label>
-    
-    
-         <input type='number'  class='form-control' step='0.05'  min='0' id="patrimonio_inicial" name='patrimonio_inicial' placeholder='0,00'>
-        
-        
-           
+     
          </div>
-          <button type='submit'class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ok' id="bt_ok3" value='1'>Salvar cadastro</button>
+          <button type='submit'class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ok555' id="bt_ok555" value='1'>Salvar cadastro</button>
          
           <p></p>
 
          
-          <input type='hidden' id='bt_cadstra_imp' name='bt_cadstra_imp' value='' />
+          <input type='hidden' id='bt_cadstra_imp' name='bt_cadstra_uso' value='' />
      
-
+          <input type='hidden'  name='id_impresa' value='<?= $idimpresa ?>' />
        </form>
        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Voltar</button>
         <p></p>
@@ -87,29 +109,3 @@
 
 
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
-
-<script>//formulario de validação
-    document.getElementById('bt_ok3').addEventListener('click', function(event) {
-      // impede o envio do formulário
-      event.preventDefault();
-
-      // verifica se os campos estão vazios
-      var formulario = document.getElementById('meu-formulario3');//este pega o formulario que quero usa
-      var inputs = formulario.getElementsByTagName('input');//este pega o tipo de input etc
-      
-        if (inputs['patrimonio_inicial'].value.trim() == '') {
-          alert('Por favor, digite o valor do ptrimonio inicial');
-          return;
-        }
-        var msg = formulario.getElementsByTagName('input');
-        if (msg['nome_empresa'].value.trim() == '') {
-          alert('Mensagem vazia! digite a o nome da empresa');
-          return;
-        }
-
-     
-
-      // se todos os campos estiverem preenchidos, envia o formulário
-      formulario.submit();
-    });
-  </script>

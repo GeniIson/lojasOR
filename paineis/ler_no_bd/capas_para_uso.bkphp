@@ -1,0 +1,70 @@
+<?php
+
+
+//include "../../config/conf_bd_or/conexao.php";
+
+
+
+  
+    $sql58 = "SELECT * FROM capas  ORDER BY id ASC ";
+    $resultado58 = mysqli_query($con, $sql58);
+
+
+while($dados58 = mysqli_fetch_array($resultado58)) { 
+    // criar variaveis para cada dado do array associativo
+    $id   = $dados58['id'];
+    $nome_arquivo  = $dados58['nome_arquivo'];
+    $descricao  = $dados58['descricao'];
+    $data_inicio  = $dados58['data_inicio'];
+    $id_usuario = $dados58['id_usuario'];
+    
+
+   
+      $imagem='../site/capas/'.$nome_arquivo;
+
+
+
+//$imagem='imagens_tipo/celular2.png';
+
+
+echo" 
+<button type='submit'class=' btn btn-primary btn-purple btn-custom' name='bt_ok_veder' id='bt_ok_veder' value='1'
+
+
+
+
+style='text-decoration: none; padding: 0 ;
+margin: 0;
+
+
+background-image: url($imagem); 
+background-position: center center;
+background-size: cover;
+
+
+width:100px;//tamanho horizontal(largura);
+height:150px;//tamanho vertical(altura);
+
+border: 2px solid;
+border-color: 0;
+box-shadow: 0 0.2rem 0.2rem #00000033;'
+>
+
+
+
+
+
+
+
+
+</button>
+
+      
+       ";
+
+
+
+
+
+
+}?>

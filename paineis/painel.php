@@ -402,6 +402,20 @@ data-bs-toggle='modal'
                 <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
                 Configurações 
               </a>
+
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">         
+                              (<i class="bi bi-globe2"></i> Site)</a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="#!">Site</a></li>
+                                  <li><hr class="dropdown-divider" /></li>
+                                  <li><a class="dropdown-item" href="#!">Carosel</a></li>
+                                  <li><a class="dropdown-item" href="#!"
+                                  data-bs-toggle='modal' 
+        data-bs-target='#capa_add'
+        >Capas</a></li>
+                              
+                            </ul>
+                        </li>
               <a class="nav-link d-flex align-items-center gap-2" href="#"
                     
                     data-bs-toggle='modal' 
@@ -422,7 +436,7 @@ data-bs-toggle='modal'
                                   </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="../acoes/?logout">
+              <a class="nav-link d-flex align-items-center gap-2" href="../acoes/logout.php">
                 <svg class="bi"><use xlink:href="#door-closed"/></svg>
                 Sair             </a>
             </li>

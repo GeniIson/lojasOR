@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
  $senha2=1;
  
  
-if(isset($_GET['bt_entrar'])) {
+if(isset($_GET['entrar'])) {
     
     
     $_SESSION['Bem_vido'] =$_GET['senha'] ;
@@ -45,7 +45,7 @@ include "modais/ijeta_captal.php";include "modais/cadastra_usuario.php";
 include "modais/compra_aparelho.php";
 include "modais/cadastra_empresa.php";
 include "modais/vender_imformativo.php";include "modais/iserir_despesa.php";
-include "modais/x_imformativo.php";
+include "modais/x_imformativo.php";include "modais/capa_add.php";
 
 }
 else{
