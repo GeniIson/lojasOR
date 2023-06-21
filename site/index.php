@@ -107,9 +107,12 @@ font-size: 12px; '>Painel
 
 </a>";
 }
-
+include "../../config/conf_bd_or/conexao.php";
 if(!isset($_GET['produto'])) {include "painel.php";}
-if(isset($_GET['produto'])) { include "pag/produto.php";}
+
+if(isset($_GET['produto'])) { 
+    include "ler_bd/produto_dados.php";
+    include "pag/produto.php";}
 
        ?>
       

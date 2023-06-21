@@ -102,7 +102,7 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                
                <?php
-               include "../../config/conf_bd_or/conexao.php";
+              
                include "ler_bd/anuncios_lista.php";
 
                include "modal_edicao/index.php";

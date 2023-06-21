@@ -1,42 +1,21 @@
 <?php
 
-
+$d =mysqli_real_escape_string($con, $_GET['produto']);
   
-$sql = "SELECT * FROM aparelhos WHERE status LIKE 'venda' ORDER BY id ASC ";
+$sqlp = "SELECT * FROM site_anuncios WHERE id LIKE '$d'";
 //$sql = "SELECT * FROM  site_anuncios WHERE status LIKE 'venda' ORDER BY id ASC ";
-$resultado = mysqli_query($con, $sql);
+$resultadop = mysqli_query($con, $sqlp);
 
 
-while($dados = mysqli_fetch_array($resultado)) { 
+$dadosp = mysqli_fetch_array($resultadop);
 // criar variaveis para cada dado do array associativo
-$id_ap   = $dados['id'];
-$tipo  = $dados['tipo'];
-$descricao   = $dados['descricao'];
-$valor_compra   = $dados['valor_compra'];
-$extra = $dados['extra'];
-$valor_venda  = $dados['valor_usado'];
-$valor_novo  = $dados['valor_novo'];
-
-
-
-               include "anuncios.php";
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
+$id_an   = $dadosp['id'];
+$descricao  = $dadosp['descricao'];
+$detalhes   = $dadosp['detalhes'];
+//$valor_compra   = $dadosp['valor_compra'];
+$capa_arquivo = $dadosp['capa_arquivo'];
+$valor_venda  = $dadosp['valo_de_venda'];
+$valor_novo  = $dadosp['valor_de_novo'];
 
 
                ?>   
