@@ -4,7 +4,7 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="capas/<?=$capa_arquivo?>"alt="<?=$id_an?>" /></div>
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="../../arquivos_fixos_importante_or/capas/<?=$capa_arquivo?>"alt="<?=$id_an?>" /></div>
                     <div class="col-md-6" >
                    
                         <div class="small mb-1">Estoque:1</div>

@@ -10,7 +10,7 @@ if(0==0){
         // ver array de tipos existe a extensao do arquivo
         if (in_array($extensao, $tipos_permitidos)) {
 
-            $pasta = "../../site/capas/";                      // pasta onde vamos guardar
+            $pasta = "../../../arquivos_fixos_importante_or/capas/";                      // pasta onde vamos guardar
             $temporario = $_FILES['foto']['tmp_name']; // nome original do arquivo
             $novo_nome = uniqid().".$ext";             // novo nome do arquivo
 
