@@ -39,23 +39,131 @@ Comprar</a>
             </div>
         </section>
         <!-- Related items section-->
-        <section class="py-5 bg-light">
-            <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4">Imagens reais</h2>
+        <section class="py-8 bg-light">
+            <div class="container px-6 px-lg-10 mt-2">
+                <h2 class="fw-bolder mb-4">Imagens reais <?php if( $permi==1) {
+                  
+
+                  include "ajustes/add_imagem_real.php";
+                 }?></h2>
 
 
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+
+                <div class="row gx-4 gx-lg-5 row-cols-6 row-cols-md-6 row-cols-xl-6 justify-content-center">
+                    
 
 <?php  
+
+
  include "ler_bd/imagens_reais_lista.php";
 ?>
 
 
 
+</div></div>
+
+
+
+
+
+
+
+
+
+
+  <script>
+    $(document).ready(function() {
+      var zoomLevel = 100;
+      var isDragging = false;
+      var startPosX = 0;
+      var startPosY = 0;
+      var startTranslateX = 0;
+      var startTranslateY = 0;
+
+      function zoomIn() {
+        zoomLevel += 10;
+        $('.zoom-container img').css('transform', 'scale(' + zoomLevel / 100 + ')');
+      }
+
+      function zoomOut() {
+        if (zoomLevel > 10) {
+          zoomLevel -= 10;
+          $('.zoom-container img').css('transform', 'scale(' + zoomLevel / 100 + ')');
+        }
+      }
+
+      function startDragging(e) {
+        if (e.which === 1) {
+          isDragging = true;
+          startPosX = e.clientX;
+          startPosY = e.clientY;
+          var image = $(this);
+          var matrix = new WebKitCSSMatrix(image.css('-webkit-transform'));
+          startTranslateX = matrix.m41;
+          startTranslateY = matrix.m42;
+        }
+      }
+
+      function stopDragging() {
+        isDragging = false;
+      }
+
+      function moveImage(e) {
+        if (isDragging && $(e.target).parents('.modal-dialog').length > 0) {
+          var deltaX = e.clientX - startPosX;
+          var deltaY = e.clientY - startPosY;
+          var image = $('.zoom-container img');
+          var translateX = startTranslateX + deltaX;
+          var translateY = startTranslateY + deltaY;
+          image.css('transform', 'scale(' + zoomLevel / 100 + ') translate(' + translateX + 'px, ' + translateY + 'px)');
+        }
+      }
+
+      $('.modal').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget);
+        var imageSrc = button.find('img').attr('src');
+        var modal = $(this);
+        var modalImg = modal.find('.zoom-container img');
+        modalImg.attr('src', imageSrc);
+        zoomLevel = 100;
+        modalImg.css('transform', 'scale(1)');
+      });
+
+      // Adicione os event handlers dos botões de zoom para todos os modais
+      for (var i = 1; i <= <?= count($imageUrls) ?>; i++) {
+        var zoomInBtnId = '#zoomInBtn' + i;
+        var zoomOutBtnId = '#zoomOutBtn' + i;
+        $(zoomInBtnId).click(zoomIn);
+        $(zoomOutBtnId).click(zoomOut);
+      }
+
+      $('.draggable').mousedown(startDragging);
+      $(document).mouseup(stopDragging);
+      $(document).mousemove(moveImage);
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
             
-</div> </div>
+
+
+
         </section>
-     
+  <?php
+  //include "exemplo_modal_imag.php";?>
+ 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

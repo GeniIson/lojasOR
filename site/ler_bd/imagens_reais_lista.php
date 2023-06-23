@@ -14,7 +14,7 @@ $descricao  = $dadosf['descricao'];
 
 $nome_arquivo = $dadosf['nome_arquivo'];
 
-
+ 
 
 
                include "imagens_anucios.php";

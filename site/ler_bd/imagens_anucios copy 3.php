@@ -1,5 +1,21 @@
 
 
+
+
+                    <div class="col mb-5">
+                       
+                    <?php if( $permi==1) {
+                  
+
+                  include "apaga_imagem_real.php";
+                 }?>
+                        <a href="#" data-toggle="modal" data-target="#imagemModal<?=$id_f?>">   <img class="card-img-top" src="../../../arquivos_fixos_importante_or/imagens_anuncio_reais/<?=$nome_arquivo?>" alt="<?=$descricao?>" /></a> 
+                          
+                       
+                        
+                    </div>
+                  
+          
    
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -35,7 +51,13 @@
     height: 100%;
   }
 
-
+  .modal-body {
+    height: calc(100% - 56px - 56px); /* altura da modal-header e modal-footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
   .zoom-container {
     width: 100%;
@@ -55,7 +77,9 @@
     user-select: none;
     cursor: pointer;
   }
-
+</style>
+<style>
+  /* Resto do código... */
 
   .zoom-container {
     width: 100%;
@@ -78,47 +102,27 @@
   }
 </style>
 
+</head>
+
+<body>
+  <div class="container">
 
 
+    <div class="row">
       <?php
-      // Simulação de obtenção das URLs das imagens do banco de dados
-      $imageUrls = [
-        "../../../arquivos_fixos_importante_or/imagens_anuncio_reais/$nome_arquivo",
-       
-       
-        // Adicione mais URLs das imagens aqui
-      ];
+      
 
-      // Loop para criar os blocos de imagem
-      for ($i = 0; $i < count($imageUrls); $i++) {
-        $imageId = $i + 1;}
-        $modalId = "imagemModal" . $imageId;
-        $zoomInBtnId = "zoomInBtn" . $imageId;
-        $zoomOutBtnId = "zoomOutBtn" . $imageId;
-        $imageSrc = "../../../arquivos_fixos_importante_or/imagens_anuncio_reais/$nome_arquivo";
-        ?>
-
-
-
-
-
-
-<div class="col mb-2">
-                       
-                       <?php if( $permi==1) {
-                     
-   
-                     include "apaga_imagem_real.php";
-                    }?>
-                                                  
-                    
-                     
-             
+    
+        $modalId = "imagemModal" . $id_f;
+        $zoomInBtnId = "zoomInBtn" . $id_f;
+        $zoomOutBtnId = "zoomOutBtn" .$id_f;
+        $imageSrc = '../../../arquivos_fixos_importante_or/imagens_anuncio_reais/'.$nome_arquivo;//$imageUrls[$i];
+      ?>
+        <div class="col-md-4">
           <a href="#" data-toggle="modal" data-target="#<?= $modalId ?>">
-            <img src="<?= $imageSrc ?>" alt="Imagem <?= $imageId ?>" class="img-fluid draggable">
+          <img class="card-img-top" src="../../../arquivos_fixos_importante_or/imagens_anuncio_reais/<?=$nome_arquivo?>" alt="<?=$descricao?>" />
           </a>
-          
-
+        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="<?= $modalId ?>" tabindex="-1" role="dialog" aria-labelledby="<?= $modalId ?>Label" aria-hidden="true">
@@ -128,9 +132,9 @@
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-               
+                <div></div>
                 <div class="zoom-container">
-                  <img src="" alt="" id="<?= $modalId ?>Img" class="img-fluid draggable">
+                  <img src="<?= $imageSrc?>" alt="" id="<?= $modalId ?>Img" class="img-fluid draggable">
                 </div>
               </div>
               <div class="modal-footer fixed-bottom">
@@ -138,8 +142,11 @@
                 <button type="button" class="btn" id="<?= $zoomOutBtnId ?>"><i class="bi bi-zoom-out"></i></button>
               </div>
             </div>
-            </div>
-          </div></div>
+          </div>
+        </div>
+
+
         
+     
 
 

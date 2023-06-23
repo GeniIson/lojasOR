@@ -27,6 +27,7 @@ if(isset($_POST['bt_entrar'])) {
         $_SESSION['mensagem']  = "Usuário logado com sucesso!";
         $_SESSION['status']    = "success";
         $_SESSION['idusuario'] = $dados['id'];
+        $_SESSION['id_usuario']= $dados['id'];
         $_SESSION['nome']       = $dados['nome'];
         $_SESSION['email']     = $dados['email'];
         $_SESSION['permissoes_id']=$dados['id_permicao'];
@@ -34,7 +35,7 @@ if(isset($_POST['bt_entrar'])) {
         $_SESSION['pg_status']     = 'todas';
         $_SESSION['pg_tela']     = 'painel';
         $_SESSION['pg_os']     = 'todas';
-        
+        $_SESSION['ID_emprersa']  = $dados['id_empresa'];
 
        
         if($url==0){
@@ -42,7 +43,7 @@ if(isset($_POST['bt_entrar'])) {
         $_SESSION['pagina-a']    =0;
         $_SESSION['pagina-servicos']    =0;
         header('Location:../');
-    }
+    } 
         if($url!=0){
      
             
