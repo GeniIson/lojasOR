@@ -13,7 +13,7 @@
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Promoção</div>
                             
                             <!-- Product image-->
-                            <img class="card-img-top" src="capas/<?=$capa_arquivo?>" alt="..." />
+                            <img class="card-img-top" src="../../capas_para_LOR/<?=$capa_arquivo?>" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4" style="padding: -10px; margin: 0px; ">
                                 <div class="text-center" style="padding: -10px; margin: 0px; ">
