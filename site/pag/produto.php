@@ -20,7 +20,7 @@
                             <div class="text-center">
 
                              <?php 
-                        $message = "Olá tudo bem?     %0A%20 << *Quero Comprar* >> %0A%20 *Produto:* _" . $descricao . "_ %0A%20 *Valor:* " . $valor_venda."%0A%20 *Link:* ".$url;
+                        $message = "Olá tudo bem?     %0A%20 << *Quero Comprar* >> %0A%20 *Produto:* _" . $descricao . "_ %0A%20 *Valor:* " . $valor_venda."%0A%20 *Link:* https://".$url;
                             ?>
                               
                               <a class="btn btn-outline-dark mt-auto" href="pag/?produto=<?=$id_ap ?>"

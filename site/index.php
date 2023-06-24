@@ -2,6 +2,9 @@
  if (!isset($_SESSION)) {
     session_start();
   }
+   if (!isset( $_SESSION['DNS'] )) {
+   header('Location: ../');
+  }
   $permi=$_SESSION['permissoes_id'];
 
   
