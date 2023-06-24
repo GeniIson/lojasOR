@@ -93,6 +93,7 @@ $p_n=$an[0];
 
 include 'modal_sit/logim_modal.php';
 include 'modal_sit/x_imformativo.php';
+include 'modal_sit/vender_modal.php';
 
 if( $permi==1) {
 
