@@ -41,7 +41,11 @@ Comprar</a>
         <!-- Related items section-->
         <section class="py-8 bg-light">
             <div class="container px-6 px-lg-10 mt-2">
-                <h2 class="fw-bolder mb-4">Imagens reais <?php if( $permi==1) {
+                <h2 class="fw-bolder mb-4">Imagens reais 
+                  
+                  
+                  
+                  <?php if( $permi==1) {
                   
 
                   include "ajustes/add_imagem_real.php";

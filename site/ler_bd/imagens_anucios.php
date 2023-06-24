@@ -88,7 +88,7 @@
        
         // Adicione mais URLs das imagens aqui
       ];
-
+      
       // Loop para criar os blocos de imagem
       for ($i = 0; $i < count($imageUrls); $i++) {
         $imageId = $i + 1;}
