@@ -2,8 +2,13 @@
         <!-- Header-->
         
         <main>
+
+    
+ <?php
+  include_once '../acoes/escreve-mensagem_mod.php';
  
-           
+ ?>
+         
         <a class="btn btn-lg btn-info" href="perfil.php"
            style=" background-color: #ffee007e;
            border-color:#ffee007e; position: fixed; right: 0; top: 0.5%;z-index: 1;
@@ -29,9 +34,9 @@
   
  
    
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div  data-bs-ride="carousel" >
     
-  <span style=' float:right;z-index: 1;
+  <span style=' float:right;z-index: 120;
   margin:-100;'>
  <?php
                  

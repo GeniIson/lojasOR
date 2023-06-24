@@ -35,6 +35,7 @@ if(isset($_POST['bt_entrar'])) {
         $_SESSION['pg_status']     = 'todas';
         $_SESSION['pg_tela']     = 'painel';
         $_SESSION['pg_os']     = 'todas';
+        
         $_SESSION['ID_emprersa']  = $dados['id_empresa'];
 
        

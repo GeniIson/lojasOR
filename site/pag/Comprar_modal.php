@@ -1,40 +1,35 @@
-<div class='modal fade' id='vender_m' tabindex='-1' aria-labelledby='Vender_m' aria-hidden='true'>
+<div class='modal fade' id='comprar' tabindex='-1' aria-labelledby='comprar' aria-hidden='true'>
 <div class='modal-dialog'>
   <div class='modal-content'>
-    <div class='modal-header'>
-      <h5 class='modal-title' id='exampleModalLabel'>Quero vender</h5>
+    <div class='modal-header' >
+      <h5 class='modal-title' id='exampleModalLabel'>Quero Comprar</h5>
    
    
       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-    </div>
+  
 
-    
-
-    <p> <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
-  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-</svg>Esse link esta disponivel para pessoas que deseja vender um aparelho para nossa impresa.</p>
+      </div>
+      <div style="margin: 6px;">
 
 
 
    
       
 
-<h5 class='modal-title' id='exampleModalLabel'style="text-align: center;">É o seu caso?</h5>
+<h5 class='modal-title' id='exampleModalLabel'style="text-align: center; color:blue;">Nossas vendas são 100% humanizadas!</h5>
 <p></p>
          
         
          
          
-          <a class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ok' id="bt_ok" value='1' data-bs-dismiss='modal'
-             
-    data-bs-toggle='modal' 
-       data-bs-target='#vender_m1'
-       
-       >Sim</a>
+<p >Clique no botão abaixo para realizar a compra segura:</p>
+
+</div>
+        <a class='w-100 btn btn-primary btn-purple btn-custom'  href='https://api.whatsapp.com/send?phone=5587981492269&text=<?=$message?>'target='_blank'>Proseguir com a compra no whatsapp</a>
          
           
         <p></p>
-        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Não</button>
+        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
         <br>
 
     
@@ -46,7 +41,7 @@
       </div>
     </div>
 
-    <div class='modal fade' id='vender_m1' tabindex='-1' aria-labelledby='Vender_m1' aria-hidden='true'>
+    <div class='modal fade' id='comprar1' tabindex='-1' aria-labelledby='comprar1' aria-hidden='true'>
 <div class='modal-dialog'>
   <div class='modal-content'>
     <div class='modal-header' >
@@ -71,7 +66,7 @@
           <a class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ok' id="bt_ok" value='1' data-bs-dismiss='modal'
              
     data-bs-toggle='modal' 
-       data-bs-target='#vender_m2'
+       data-bs-target='#comprar2'
        
        >Ok</a>
          
@@ -90,11 +85,11 @@
     </div>
 
 
-    <div class='modal fade' id='vender_m2' tabindex='-1' aria-labelledby='Vender_m2' aria-hidden='true'>
+    <div class='modal fade' id='comprar2' tabindex='-1' aria-labelledby='comprar2' aria-hidden='true'>
 <div class='modal-dialog'>
   <div class='modal-content'>
     <div class='modal-header'>
-      <h5 class='modal-title' id='exampleModalLabel'>Quero vender</h5>
+      <h5 class='modal-title' id='exampleModalLabel'>Quero comprar</h5>
    
    
       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
@@ -118,7 +113,7 @@
   <a class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ok' id="bt_ok" value='1' data-bs-dismiss='modal'
              
              data-bs-toggle='modal' 
-                data-bs-target='#vender_m3'
+                data-bs-target='#comprar3'
                 
                 >Avansar</a>
 
@@ -138,11 +133,11 @@
     </div>
 
 
-    <div class='modal fade' id='vender_m3' tabindex='-1' aria-labelledby='Vender_m3' aria-hidden='true'>
+    <div class='modal fade' id='comprar3' tabindex='-1' aria-labelledby='comprar3' aria-hidden='true'>
 <div class='modal-dialog'>
   <div class='modal-content'>
     <div class='modal-header'>
-      <h5 class='modal-title' id='exampleModalLabel'>Quero vender</h5>
+      <h5 class='modal-title' id='exampleModalLabel'>Quero comprar</h5>
    
    
       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
@@ -162,7 +157,7 @@
  <a class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ok' id="bt_ok" value='1' data-bs-dismiss='modal'
              
              data-bs-toggle='modal' 
-                data-bs-target='#vender_m4'
+                data-bs-target='#comprar4'
                 
                 >Avansar</a>
 
@@ -185,11 +180,11 @@
     </div>
 
     
-    <div class='modal fade' id='vender_m4' tabindex='-1' aria-labelledby='Vender_m4' aria-hidden='true'>
+    <div class='modal fade' id='comprar4' tabindex='-1' aria-labelledby='comprar4' aria-hidden='true'>
 <div class='modal-dialog'>
   <div class='modal-content'>
     <div class='modal-header'>
-      <h5 class='modal-title' id='exampleModalLabel'>Quero vender</h5>
+      <h5 class='modal-title' id='exampleModalLabel'>Quero comprar</h5>
    
    
       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
