@@ -20,7 +20,7 @@ while($dados58 = mysqli_fetch_array($resultado58)) {
     
 
    
-      $imagem='../site/capas/'.$nome_arquivo;
+      $imagem='../../arquivos_fixos_importante_or/capas/'.$nome_arquivo;
 
 
 

@@ -103,7 +103,7 @@
 
 
 
-<div class="col mb-2">
+<div class="col mb-5">
                        
                        <?php if( $permi==1) {
                      
@@ -112,13 +112,14 @@
                     }?>
                                                   
                     
-                     
+              <div class="card h-100">         
              
           <a href="#" data-toggle="modal" data-target="#<?= $modalId ?>">
             <img src="<?= $imageSrc ?>" alt="Imagem <?= $imageId ?>" class="img-fluid draggable">
           </a>
           
-
+ </div>
+        
 
         <!-- Modal -->
         <div class="modal fade" id="<?= $modalId ?>" tabindex="-1" role="dialog" aria-labelledby="<?= $modalId ?>Label" aria-hidden="true">

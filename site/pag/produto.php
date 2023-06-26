@@ -1,6 +1,9 @@
 
      
         <!-- Product section-->
+ <?php
+         $url =$DNS. $_SERVER['REQUEST_URI'];
+        ?>
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
@@ -12,20 +15,50 @@
                         <div class="fs-5 mb-5">
                             <span class="text-decoration-line-through" style="font-size: 16px;">R$<?=$valor_novo?></span>
                             <span style="font-size: 25px;" >R$<?=$valor_venda?></span>
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="pag/?produto=<?=$id_ap ?>">
+                            <div class="text-center">
+
+                             <?php 
+                        $message = "Olá tudo bem?     %0A%20 << *Quero Comprar* >> %0A%20 *Produto:* _" . $descricao . "_ %0A%20 *Valor:* " . $valor_venda."%0A%20 *Link:* https://".$url;
+                            ?>
+                              
+                              <a class="btn btn-outline-dark mt-auto" href="pag/?produto=<?=$id_ap ?>"
+                            data-bs-dismiss='modal'
+        data-bs-toggle='modal' 
+                data-bs-target='#comprar'
+                >
                     <i class="bi-cart-fill me-1"></i>
 
 
-Comprar</a>
+Comprar</a>      <a class="btn btn-outline-dark mt-auto"  href='https://api.whatsapp.com/send/?text=https://<?=$url?>'target='_blank'
+
+
+
+
+                           
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capslock" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM14.346 8.5 8 1.731 1.654 8.5H4.5a1 1 0 0 1 1 1v1h5v-1a1 1 0 0 1 1-1h2.846zm-9.846 5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1zm6 0h-5v1h5v-1z"/>
+</svg>
+
+
+Compartilhar</a>
 
 <a class="btn btn-lg btn-info" href="perfil.php"
            style=" background-color:#006eff59;
            border-color:#006eff59; position: fixed; right: 0; top: 0.5%;z-index: 1;
-           font-size: 12px; ">  
+           font-size: 12px; "
+           data-bs-dismiss='modal'
+        data-bs-toggle='modal' 
+                data-bs-target='#comprar'
+                
+                
+                >  
            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
   <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
 </svg>
          Comprar</a>
+
+         
 
 
 </div>
@@ -54,7 +87,7 @@ Comprar</a>
 
 
 
-                <div class="row gx-4 gx-lg-5 row-cols-6 row-cols-md-6 row-cols-xl-6 justify-content-center">
+                  <div class="row gx-4 gx-lg-5 row-cols-3 row-cols-md-6 row-cols-xl-6 justify-content-center">
                     
 
 <?php  
@@ -69,7 +102,10 @@ Comprar</a>
 
 
 
+<?php
+include "Comprar_modal.php";
 
+?>
 
 
 
