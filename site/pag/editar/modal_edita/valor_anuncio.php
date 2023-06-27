@@ -2,10 +2,10 @@
 
 <a href=""
 data-bs-toggle='modal' 
-       data-bs-target='#nome_anu'
+       data-bs-target='#valo_anu'
        
        > <i class="bi bi-pencil-square"></i></a>
-<div class='modal fade' id='nome_anu' tabindex='-1' aria-labelledby='nome_anu' aria-hidden='true'>
+<div class='modal fade' id='valo_anu' tabindex='-1' aria-labelledby='valo_anu' aria-hidden='true'>
 <div class='modal-dialog'>
   <div class='modal-content'>
     <div class='modal-header'>
@@ -17,12 +17,14 @@ data-bs-toggle='modal'
 
          <br>        
 <form action="pag/editar/editar_bd/edita_bd.php" method="POST">  
-<h5 class='modal-title' id='exampleModalLabel'>Nome do anuncio:</h5>
- 
-  <input type="text" id="name_anucio" name="name_anucio" class='form-control '  value="<?=$descricao?>" >
-  <br>
+<h5 class='modal-title' id='exampleModalLabel'> Valor de um aparelho Zero:</h5>
 
-  <button type='submit'class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ed_nome' id="bt_ed_nome<?=$id_ap?>" value="<?=$id_an?>">Salvar</button>
+<input type='number'  class='form-control' step='0.01'  min='0' id="valor34" name='valorzero' value="<?=$valor_novo?>">
+<br>
+<h5 class='modal-title' id='exampleModalLabel'> Preço de Venda:</h5>
+<input type='number'  class='form-control' step='0.01'  min='0' id="valor34" name='valorvenda' value="<?=$valor_venda?>">
+<br>
+  <button type='submit'class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ed_valor' id="bt_ed_valor<?=$id_ap?>" value="<?=$id_an?>">Salvar</button>
          
        <p></p> 
       

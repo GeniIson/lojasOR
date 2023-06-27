@@ -124,10 +124,12 @@ include "../../config/conf_bd_or/conexao.php";
 include_once '../acoes/escreve-mensagem_mod.php';
 include_once '../acoes/escreve-mensagem.php';
 
-if(!isset($_GET['produto'])) {include "painel.php";}
+if(!isset($_GET['produto'])) {
+    include_once "painel.php";
+}
 
 if(isset($_GET['produto'])) { 
-    include "ler_bd/produto_dados.php";
+    include_once "ler_bd/produto_dados.php";
     include "pag/produto.php";}
 
        ?>

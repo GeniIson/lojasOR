@@ -2,10 +2,10 @@
 
 <a href=""
 data-bs-toggle='modal' 
-       data-bs-target='#nome_anu'
+       data-bs-target='#deta_anu'
        
        > <i class="bi bi-pencil-square"></i></a>
-<div class='modal fade' id='nome_anu' tabindex='-1' aria-labelledby='nome_anu' aria-hidden='true'>
+<div class='modal fade' id='deta_anu' tabindex='-1' aria-labelledby='deta_anu' aria-hidden='true'>
 <div class='modal-dialog'>
   <div class='modal-content'>
     <div class='modal-header'>
@@ -17,12 +17,15 @@ data-bs-toggle='modal'
 
          <br>        
 <form action="pag/editar/editar_bd/edita_bd.php" method="POST">  
-<h5 class='modal-title' id='exampleModalLabel'>Nome do anuncio:</h5>
- 
-  <input type="text" id="name_anucio" name="name_anucio" class='form-control '  value="<?=$descricao?>" >
-  <br>
 
-  <button type='submit'class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ed_nome' id="bt_ed_nome<?=$id_ap?>" value="<?=$id_an?>">Salvar</button>
+<h5 class='modal-title' id='exampleModalLabel'style="text-align: center;">Detailhes do anuncio</h5>
+
+
+
+ <textarea cols='10' rows='5'  class='form-control' id="detalhes" name="detalhes" placeholder="Digite aqui a descrição com o macimo pocivel de detailhes." required><?=$detalhes ?></textarea><br>
+
+
+  <button type='submit'class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ed_detalhes' id="bt_ed_detalhes<?=$id_ap?>" value="<?=$id_an?>">Salvar</button>
          
        <p></p> 
       

@@ -14,7 +14,7 @@ while($dados58 = mysqli_fetch_array($resultado58)) {
     // criar variaveis para cada dado do array associativo
     $id   = $dados58['id'];
     $nome_arquivo  = $dados58['nome_arquivo'];
-    $descricao  = $dados58['descricao'];
+    $descricao_cap  = $dados58['descricao'];
     $data_inicio  = $dados58['data_inicio'];
     $id_usuario = $dados58['id_usuario'];
     
@@ -36,7 +36,7 @@ echo"
 
                       
                             <!-- Sale badge-->
-                            <div class='badge bg-dark text-white position-absolute' style='top: 0.5rem; right: 0.5rem'><h5>$descricao</h5></div>
+                            <div class='badge bg-dark text-white position-absolute' style='top: 0.5rem; right: 0.5rem'><h5>$descricao_cap</h5></div>
                             
                         
                             <img class='card-img-top' src='$imagem'alt='...' />

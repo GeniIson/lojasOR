@@ -12,7 +12,7 @@
   margin:-100;'> <?php if( $permi==1) {
                   
 
-                  include "editar/modal_edita/nome_anuncio.php";
+                  include "editar/modal_edita/capa_anuncio_edta.php";
                  }?></span>
                       <img class="card-img-top mb-5 mb-md-0" src="../../arquivos_fixos_importante_or/capas/<?=$capa_arquivo?>"alt="<?=$id_an?>" /></div>
                     <div class="col-md-6" >
@@ -29,7 +29,12 @@
                </h1>
                         <div class="fs-5 mb-5">
                             <span class="text-decoration-line-through" style="font-size: 16px;">R$<?=$valor_novo?></span>
-                            <span style="font-size: 25px;" >R$<?=$valor_venda?></span>
+                            <span style="font-size: 25px;" >R$<?=$valor_venda?>
+                            <?php if( $permi==1) {
+                  
+
+                  include "editar/modal_edita/valor_anuncio.php";
+                 }?></span>
                             <div class="text-center">
 
                              <?php 
@@ -76,8 +81,15 @@ Compartilhar</a>
 
 </div>
                         </div>
+                        <div><span style=' float:right;z-index: 120;
+  margin:-100;'> <?php if( $permi==1) {
+                  
+
+                  include "editar/modal_edita/detalhes_anuncio.php";
+                 }?></span>
+                        <div class="lead"><?=$detalhes ?>
                         
-                        <p class="lead"><?=$detalhes ?></p>
+                      </div></div>
 
 
                     </div>
