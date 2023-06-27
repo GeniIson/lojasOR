@@ -28,7 +28,7 @@
     $valor  =mysqli_real_escape_string($con, $_GET['valor45']);
 
     $message = "Olá tudo bem?     %0A%20 >> *Quero vender* << %0A%20 *Nome:* _" . $name . "_ %0A%20 *Descrição:* " . $descricao . " %0A%20 *Valor:* " . $valor;
-    $_SESSION['mensagem'] = " 
+    $_SESSION['mensagem_zap'] = " 
 
      
    

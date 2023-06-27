@@ -4,10 +4,7 @@
         <main>
 
     
- <?php
-  include_once '../acoes/escreve-mensagem_mod.php';
- 
- ?>
+
          
         <a class="btn btn-lg btn-info" href="perfil.php"
            style=" background-color: #ffee007e;

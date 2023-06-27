@@ -39,7 +39,10 @@ include "../../config/comfg_e_DNS_todos_app.php";
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page"  href="?home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Vender</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!"
+                                   
+    data-bs-toggle='modal' 
+       data-bs-target='#vender_m'>Vender</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conhecer</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -117,6 +120,10 @@ font-size: 12px; '>Painel
 </a>";
 }
 include "../../config/conf_bd_or/conexao.php";
+
+include_once '../acoes/escreve-mensagem_mod.php';
+include_once '../acoes/escreve-mensagem.php';
+
 if(!isset($_GET['produto'])) {include "painel.php";}
 
 if(isset($_GET['produto'])) { 

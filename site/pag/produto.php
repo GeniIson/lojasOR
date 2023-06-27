@@ -7,11 +7,26 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="../../arquivos_fixos_importante_or/capas/<?=$capa_arquivo?>"alt="<?=$id_an?>" /></div>
+                    <div class="col-md-6"> 
+                    <span style=' float:right;z-index: 120;
+  margin:-100;'> <?php if( $permi==1) {
+                  
+
+                  include "editar/modal_edita/nome_anuncio.php";
+                 }?></span>
+                      <img class="card-img-top mb-5 mb-md-0" src="../../arquivos_fixos_importante_or/capas/<?=$capa_arquivo?>"alt="<?=$id_an?>" /></div>
                     <div class="col-md-6" >
                    
                         <div class="small mb-1">Estoque:1</div>
-                        <h1 class="display-5 fw-bolder"><?=$descricao?></h1>
+                        <h1 class="display-5 fw-bolder"><?=$descricao?> 
+                        <?php if( $permi==1) {
+                  
+
+                  include "editar/modal_edita/nome_anuncio.php";
+                 }?>
+                 
+                 
+               </h1>
                         <div class="fs-5 mb-5">
                             <span class="text-decoration-line-through" style="font-size: 16px;">R$<?=$valor_novo?></span>
                             <span style="font-size: 25px;" >R$<?=$valor_venda?></span>
@@ -36,9 +51,7 @@ Comprar</a>      <a class="btn btn-outline-dark mt-auto"  href='https://api.what
 
                            
                 >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capslock" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM14.346 8.5 8 1.731 1.654 8.5H4.5a1 1 0 0 1 1 1v1h5v-1a1 1 0 0 1 1-1h2.846zm-9.846 5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1zm6 0h-5v1h5v-1z"/>
-</svg>
+                <i class="bi bi-share"></i>
 
 
 Compartilhar</a>
@@ -118,7 +131,7 @@ include "Comprar_modal.php";
       var isDragging = false;
       var startPosX = 0;
       var startPosY = 0;
-      var startTranslateX = 0;
+      var startTranslateX = 0; 
       var startTranslateY = 0;
 
       function zoomIn() {
