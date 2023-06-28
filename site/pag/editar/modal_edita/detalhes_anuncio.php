@@ -1,4 +1,5 @@
 
+<script src="ckeditor/ckeditor.js"></script>
 
 <a href=""
 data-bs-toggle='modal' 
@@ -25,6 +26,7 @@ data-bs-toggle='modal'
  <textarea cols='10' rows='5'  class='form-control' id="detalhes" name="detalhes" placeholder="Digite aqui a descrição com o macimo pocivel de detailhes." required><?=$detalhes ?></textarea><br>
 
 
+
   <button type='submit'class='w-100 btn btn-primary btn-purple btn-custom' name='bt_ed_detalhes' id="bt_ed_detalhes<?=$id_ap?>" value="<?=$id_an?>">Salvar</button>
          
        <p></p> 
@@ -42,3 +44,11 @@ data-bs-toggle='modal'
         ?>
       </div>
     </div>
+
+  
+    <script>
+        // Inicializando o CKEditor
+        CKEDITOR.replace('detalhes', {
+    removeButtons: 'Save,NewPage'
+});
+    </script>
