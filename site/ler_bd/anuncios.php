@@ -8,7 +8,7 @@
 
 
 <div class="col mb-5" style="padding: 10px;margin: 0;">
-                        <div class="card h-100" style="padding: -10px; margin: 0px; ">
+                        <div class="card h-100">
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Promoção</div>
                             
