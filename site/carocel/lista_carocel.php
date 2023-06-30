@@ -14,18 +14,11 @@ $nome_arquivocc  = $dadoscc['nome_arquivo'];
 $titulocc  = $dadoscc['titulo'];
 $frase  = $dadoscc['frase'];
 
-
-if($active==0){
-    include "active_carocel.php";
-    
-  $active=1;
-  }
  
-  else {
     
     include "item_carocel.php";
 
-}
+
 
 
 }

@@ -1,7 +1,21 @@
 
-  
+
+<?php
+
+
+if($active==0){
+  echo'<div class="carousel-item active">';
+   
+ $active=1;
+ }
+
+ else {
+  echo'<div class="carousel-item">';
+}
+?>
+
     
-<div class="carousel-item">
+
   
       <img src="images/<?=$nome_arquivocc?>" alt="" />
 

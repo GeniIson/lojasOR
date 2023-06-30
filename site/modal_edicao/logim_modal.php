@@ -2,7 +2,9 @@
 
 
 
-<div class='modal fade' id='logrr' tabindex='-1' aria-labelledby='logrr' aria-hidden='true'>
+
+
+<div class='modal fade' id='logrr2' tabindex='-1' aria-labelledby='logrr2' aria-hidden='true'>
 <div class='modal-dialog'>
   <div class='modal-content'>
     <div class='modal-header' style="z-index: 1;">
