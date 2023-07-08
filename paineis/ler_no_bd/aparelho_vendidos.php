@@ -6,12 +6,12 @@
 
 
   
-    $sql = "SELECT * FROM aparelhos WHERE status LIKE 'vedido' ORDER BY id DESC ";
-    $resultado = mysqli_query($con, $sql);
+    $sqlv = "SELECT * FROM aparelhos WHERE status LIKE 'vendido' ORDER BY id DESC ";
+    $resultadov = mysqli_query($con, $sqlv);
 
 
 
-while($dados = mysqli_fetch_array($resultado)) { 
+while($dados = mysqli_fetch_array($resultadov)) { 
     // criar variaveis para cada dado do array associativo
     $id_ap   = $dados['id'];
     $tipo  = $dados['tipo'];
